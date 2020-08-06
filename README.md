@@ -2,8 +2,7 @@
 
     shadowsocks client for socks5 proxy
     privoxy for http proxy
-    forked from bluebu/shadowsocks-privoxy
-    upgrade shadowsocks to shadowsocks-py-2.9.1
+    forked from bluebu/shadowsocks-privoxy, upgrade shadowsocks to shadowsocks-py-2.9.1
 
 ## Image:
 
