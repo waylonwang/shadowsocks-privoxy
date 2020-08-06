@@ -8,10 +8,16 @@ LABEL maintainer Waylon Wang <waylon.act@gmail.com>
 RUN \
   apk --update --upgrade add \
       py-pip \
+      git \
       privoxy \
   && rm /var/cache/apk/*
 
-RUN pip install shadowsocks-py
+# RUN pip install shadowsocks-py
+RUN git clone https://github.com/shadowsocks/shadowsocks.git master
+RUN cd master
+RUN git checkout master
+RUN python3 setup.py install
+RUN cd /
 
 ENV SERVER_ADDR= \
     SERVER_PORT=8899  \
