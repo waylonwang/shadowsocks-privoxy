@@ -14,10 +14,10 @@ RUN \
 
 # RUN pip install shadowsocks-py
 RUN git clone https://github.com/shadowsocks/shadowsocks.git master
-RUN cd master
+WORKDIR master
 RUN git checkout master
 RUN python3 setup.py install
-RUN cd /
+WORKDIR /
 
 ENV SERVER_ADDR= \
     SERVER_PORT=8899  \
