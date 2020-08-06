@@ -9,6 +9,7 @@ RUN \
   apk --update --upgrade add \
       py-pip \
 #      git \
+      libsodium \
       privoxy \
   && rm /var/cache/apk/*
 
