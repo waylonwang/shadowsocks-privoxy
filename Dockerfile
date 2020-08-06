@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER bluebu <bluebuwang@gmail.com>
+LABEL maintainer Waylon Wang <waylon.act@gmail.com>
 
 #------------------------------------------------------------------------------
 # Environment variables:
@@ -11,7 +11,7 @@ RUN \
       privoxy \
   && rm /var/cache/apk/*
 
-RUN pip install shadowsocks
+RUN pip install shadowsocks-py
 
 ENV SERVER_ADDR= \
     SERVER_PORT=8899  \
