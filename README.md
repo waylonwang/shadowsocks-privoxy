@@ -7,7 +7,7 @@
 ## Image:
 
 ~~~
-docker pull bluebu/shadowsocks-privoxy
+docker pull cloudvalley/shadowsocks-privoxy
 ~~~
 
 
