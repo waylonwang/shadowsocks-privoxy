@@ -8,17 +8,10 @@ LABEL maintainer Waylon Wang <waylon.act@gmail.com>
 RUN \
   apk --update --upgrade add \
       py-pip \
-#      git \
       libsodium \
       privoxy \
   && rm /var/cache/apk/*
 
-# RUN pip install shadowsocks-py
-# RUN git clone https://github.com/shadowsocks/shadowsocks.git master
-# WORKDIR master
-# RUN git checkout master
-# RUN python3 setup.py install
-# WORKDIR /
 RUN pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U
 
 ENV SERVER_ADDR= \
